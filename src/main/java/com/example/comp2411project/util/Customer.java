@@ -1,8 +1,11 @@
 package com.example.comp2411project.util;
 
+import com.example.comp2411project.func.Cache;
 import com.example.comp2411project.func.OracleDB;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Customer implements Table {
     long id;
@@ -90,5 +93,34 @@ public class Customer implements Table {
             }
         }
         oracleDB.closeConnection();
+    }
+
+    public HashMap<Long, Order> getOrderList(){
+        HashMap<Long, Order> ret = new HashMap<>();
+        OracleDB oracleDB = OracleDB.getInstance();
+        Cache cache = Cache.getInstance();
+        oracleDB.getConnection();
+        try(ResultSet rs = oracleDB.query("SELECT ID FROM ORDER WHERE CUSTOMERID = ?", id)){
+            while(rs.next()){
+                long oid = rs.getLong(1);
+                Order order;
+                if(cache.getOrderHashMap().containsKey(oid)) {
+                    order = cache.getOrderHashMap().get(oid);
+                }else{
+                    order = new Order(oid);
+                    cache.getOrderHashMap().put(oid, order);
+                }
+                order.pullUpdate();
+                ret.put(oid, order);
+            }
+        }catch (SQLException e){
+            System.out.println("Search the order list failed. ");
+            while(e != null){
+                System.out.println("message: " + e.getMessage());
+                e = e.getNextException();
+            }
+        }
+        oracleDB.closeConnection();
+        return ret;
     }
 }

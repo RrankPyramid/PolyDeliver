@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a303d79-8132-4615-aebb-3f02b0859458" name="Changes" comment="add gui framework">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ojdbc7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/AppLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Deliverman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" afterDir="false" />
+    <list default="true" id="0a303d79-8132-4615-aebb-3f02b0859458" name="Changes" comment="add basic functions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP2411-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP2411-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/comp2411project.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/comp2411project.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Deliverman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Deliverman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635765440228</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add basic functions">
+      <created>1637056601360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637056601360</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add gui framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gui framework" />
+    <MESSAGE value="add basic functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic functions" />
   </component>
 </project>

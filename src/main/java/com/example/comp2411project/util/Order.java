@@ -1,10 +1,11 @@
 package com.example.comp2411project.util;
 
+import com.example.comp2411project.func.Cache;
 import com.example.comp2411project.func.OracleDB;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Set;
+import java.util.*;
 
 public class Order implements Table{
 
@@ -14,6 +15,10 @@ public class Order implements Table{
     long customerID;
     Set<Long> goodIDs;
     double price;
+
+    public Order(long id) {
+        this.id = id;
+    }
 
     public Order(long id, long deliverManID, long merchantID, long customerID, Set<Long> goodIDs, double price) {
         this.id = id;
@@ -104,7 +109,8 @@ public class Order implements Table{
                 price = rs.getDouble(4);
             }
             if(goodIDs == null){
-                rs = oracleDB.query("SELECT DISTINCT GOODID FROM ORDER2GOODS WHERE ORDERID = ?", id);
+                goodIDs = new TreeSet<>();
+                rs = oracleDB.query("SELECT GOODID FROM ORDER2GOODS WHERE ORDERID = ?", id);
                 while (rs.next()){
                     long goodID = rs.getLong(1);
                     goodIDs.add(goodID);
@@ -119,4 +125,25 @@ public class Order implements Table{
         }
         oracleDB.closeConnection();
     }
+
+    public HashMap<Long, Goods> getGoodsList(){
+        if(getGoodIDs() == null){
+            pullUpdate();
+        }
+        HashMap<Long, Goods> ret = new HashMap<>();
+        for(long gid : getGoodIDs()){
+            if(Cache.getInstance().getGoodsHashMap().containsKey(gid)){
+                Goods goods = Cache.getInstance().getGoodsHashMap().get(gid);
+                goods.pullUpdate();
+                ret.put(gid, goods);
+            }
+            else {
+                Goods goods = new Goods(gid);
+                goods.pullUpdate();
+                ret.put(gid, goods);
+            }
+        }
+        return ret;
+    }
+
 }
