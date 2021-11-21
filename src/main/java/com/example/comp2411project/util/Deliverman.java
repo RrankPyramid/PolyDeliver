@@ -72,7 +72,7 @@ public class Deliverman implements Table {
     }
 
     @Override
-    public void pushInfo(){
+    public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("DELIVERMAN", "ID", id);
@@ -85,10 +85,11 @@ public class Deliverman implements Table {
             id = oracleDB.insert("INSERT INTO DELIVERMAN(USERNAME, PASSWORD, PHONENO, ORDERNO, X, Y) VALUES(?, ?, ?, ?, ?, ?)",username, password, phoneNO, orderNO, px, py);
         }
         oracleDB.closeConnection();
+        return this;
     }
 
     @Override
-    public void pullUpdate(){
+    public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ORDERNO, X, Y FROM DELIVERMAN WHERE ID = ?", id)){
@@ -108,6 +109,7 @@ public class Deliverman implements Table {
             }
         }
         oracleDB.closeConnection();
+        return this;
     }
 
 

@@ -6,6 +6,7 @@ import com.example.comp2411project.func.OracleDB;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 public class Customer implements Table {
     long id;
@@ -13,6 +14,8 @@ public class Customer implements Table {
     String password;
     String phoneNO;
     String address;
+    double px;
+    double py;
 
     public String getPassword() {
         return password;
@@ -59,31 +62,34 @@ public class Customer implements Table {
     }
 
     @Override
-    public void pushInfo(){
+    public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("CUSTOMER", "ID", id);
         if(hasValue){
             oracleDB.update("UPDATE CUSTOMER "+
-                    "SET USERNAME = ?, PASSWORD = ?, PHONENO = ?, ADDRESS = ? "+
-                    "WHERE ID = ?", username, password, phoneNO, address, id);
+                    "SET USERNAME = ?, PASSWORD = ?, PHONENO = ?, ADDRESS = ?, PX = ?, PY = ? "+
+                    "WHERE ID = ?", username, password, phoneNO, address, px, py, id);
 
         }else{
-            id = oracleDB.insert("INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, ADDRESS) VALUES(?, ?, ?, ?)",username, password, phoneNO, address);
+            id = oracleDB.insert("INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY, id) VALUES(?, ?, ?, ?)",username, password, phoneNO, px, py, address);
         }
         oracleDB.closeConnection();
+        return this;
     }
 
     @Override
-    public void pullUpdate(){
+    public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS FROM CUSTOMER WHERE ID = ?", id)){
+        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY FROM CUSTOMER WHERE ID = ?", id)){
             if(rs.next()){
                 username = rs.getString(1);
                 password = rs.getString(2);
                 phoneNO = rs.getString(3);
                 address = rs.getString(4);
+                px = rs.getDouble(5);
+                py = rs.getDouble(6);
             }
         }catch (SQLException e){
             System.out.println("Query Error: ");
@@ -93,6 +99,7 @@ public class Customer implements Table {
             }
         }
         oracleDB.closeConnection();
+        return this;
     }
 
     public HashMap<Long, Order> getOrderList(){
@@ -122,5 +129,14 @@ public class Customer implements Table {
         }
         oracleDB.closeConnection();
         return ret;
+    }
+
+    public Order makeOrder(long merchantID, Set<Long> goodIDs){
+        Cache cache = Cache.getInstance();
+        Merchant merchant = cache.getMerchant(merchantID);
+        Deliverman deliverman = merchant.getNearestDeliverman();
+        double price = goodIDs.stream().mapToDouble(k -> cache.getGoods(k).getPrice()).sum();
+        Order order = (Order) new Order(deliverman.getId(), merchant.getId(), this.getId(), goodIDs, price, 1).pushInfo();
+        return order;
     }
 }

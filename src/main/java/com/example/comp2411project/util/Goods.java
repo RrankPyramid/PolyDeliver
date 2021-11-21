@@ -57,7 +57,7 @@ public class Goods implements Table {
     }
 
     @Override
-    public void pushInfo(){
+    public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("GOODS", "ID", id);
@@ -70,10 +70,11 @@ public class Goods implements Table {
             id = oracleDB.insert("INSERT INTO GOODS(MERCHANTID, PRICE, NAME, COUNTS) VALUES(?, ?, ?, ?)",merchantID, price, name, counts);
         }
         oracleDB.closeConnection();
+        return this;
     }
 
     @Override
-    public void pullUpdate(){
+    public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         try(ResultSet rs = oracleDB.query("SELECT MERCHANTID, PRICE, NAME, COUNTS FROM GOODS WHERE ID = ?", id)){
@@ -91,6 +92,7 @@ public class Goods implements Table {
             }
         }
         oracleDB.closeConnection();
+        return this;
     }
 
 }

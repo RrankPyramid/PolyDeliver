@@ -17,6 +17,10 @@ public class Merchant implements Table {
     double positionX;
     double positionY;
 
+    public Merchant(long id){
+        this.id=id;
+    }
+
     public long getId() {
         return id;
     }
@@ -74,7 +78,7 @@ public class Merchant implements Table {
     }
 
     @Override
-    public void pushInfo(){
+    public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("MERCHANT", "ID", id);
@@ -87,10 +91,11 @@ public class Merchant implements Table {
             id = oracleDB.insert("INSERT INTO MERCHANT(USERNAME, PASSWORD, PHONENO, ADDRESS) VALUES(?, ?, ?, ?)",username, password, phoneNO, address);
         }
         oracleDB.closeConnection();
+        return this;
     }
 
     @Override
-    public void pullUpdate(){
+    public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS FROM MERCHANT WHERE ID = ?", id)){
@@ -108,6 +113,7 @@ public class Merchant implements Table {
             }
         }
         oracleDB.closeConnection();
+        return this;
     }
 
     public HashMap<Long, Order> getOrderList(){
@@ -137,5 +143,9 @@ public class Merchant implements Table {
         }
         oracleDB.closeConnection();
         return ret;
+    }
+
+    public Deliverman getNearestDeliverman() {
+        return null;
     }
 }
