@@ -1,21 +1,25 @@
 package com.example.comp2411project.util;
 
+import com.example.comp2411project.AppLog;
 import com.example.comp2411project.func.Cache;
 import com.example.comp2411project.func.OracleDB;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
 public class Customer implements Table {
-    long id;
+    long customerId;
     String username;
     String password;
     String phoneNO;
     String address;
-    double px;
-    double py;
+    int px;
+    int py;
+
+    public Customer(long id) {
+        customerId = id;
+    }
 
     public String getPassword() {
         return password;
@@ -25,12 +29,12 @@ public class Customer implements Table {
         this.password = password;
     }
 
-    public long getId() {
-        return id;
+    public long getCustomerId() {
+        return customerId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
     }
 
     public String getUsername() {
@@ -65,36 +69,38 @@ public class Customer implements Table {
     public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        boolean hasValue = oracleDB.existValue("CUSTOMER", "ID", id);
+        boolean hasValue = oracleDB.existValue("CUSTOMER", "ID", customerId);
         if(hasValue){
             oracleDB.update("UPDATE CUSTOMER "+
                     "SET USERNAME = ?, PASSWORD = ?, PHONENO = ?, ADDRESS = ?, PX = ?, PY = ? "+
-                    "WHERE ID = ?", username, password, phoneNO, address, px, py, id);
+                    "WHERE ID = ?", username, password, phoneNO, address, px, py, customerId);
 
         }else{
-            id = oracleDB.insert("INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY, id) VALUES(?, ?, ?, ?)",username, password, phoneNO, px, py, address);
+            customerId = oracleDB.insert("INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY, id) VALUES(?, ?, ?, ?)",username, password, phoneNO, px, py, address);
         }
         oracleDB.closeConnection();
         return this;
     }
 
+    // select is null
+
     @Override
     public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY FROM CUSTOMER WHERE ID = ?", id)){
+        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY FROM CUSTOMER WHERE ID = ?", customerId)){
             if(rs.next()){
                 username = rs.getString(1);
                 password = rs.getString(2);
                 phoneNO = rs.getString(3);
                 address = rs.getString(4);
-                px = rs.getDouble(5);
-                py = rs.getDouble(6);
+                px = rs.getInt(5);
+                py = rs.getInt(6);
             }
         }catch (SQLException e){
-            System.out.println("Query Error: ");
+            AppLog.getInstance().log("Query Error: ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -107,7 +113,7 @@ public class Customer implements Table {
         OracleDB oracleDB = OracleDB.getInstance();
         Cache cache = Cache.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT ID FROM ORDER WHERE CUSTOMERID = ?", id)){
+        try(ResultSet rs = oracleDB.query("SELECT ID FROM ORDER WHERE CUSTOMERID = ?", customerId)){
             while(rs.next()){
                 long oid = rs.getLong(1);
                 Order order;
@@ -121,9 +127,9 @@ public class Customer implements Table {
                 ret.put(oid, order);
             }
         }catch (SQLException e){
-            System.out.println("Search the order list failed. ");
+            AppLog.getInstance().log("Search the order list failed. ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -134,9 +140,42 @@ public class Customer implements Table {
     public Order makeOrder(long merchantID, Set<Long> goodIDs){
         Cache cache = Cache.getInstance();
         Merchant merchant = cache.getMerchant(merchantID);
-        Deliverman deliverman = merchant.getNearestDeliverman();
         double price = goodIDs.stream().mapToDouble(k -> cache.getGoods(k).getPrice()).sum();
-        Order order = (Order) new Order(deliverman.getId(), merchant.getId(), this.getId(), goodIDs, price, 1).pushInfo();
+        Order order = (Order) new Order(merchant.getMerchantId(), this.getCustomerId(), goodIDs, price, 1).pushInfo();
         return order;
+    }
+
+    public void confirmRecieve(Order order){
+        order.setStatus(order.getStatus() + 1);
+        order.pushInfo();
+    }
+
+    public static long checkUsernameAndPassword(String username, String password) throws IllegalArgumentException{
+        OracleDB oracle = OracleDB.getInstance();
+        oracle.getConnection();
+        long ret = 0;
+        boolean hasValue = oracle.existValue("CUSTOMER", "USERNAME", username);
+        if(!hasValue)
+            throw new IllegalArgumentException();
+        try(ResultSet rs = oracle.query("SELECT PASSWORD, CUSTOMERID FROM CUSTOMER WHERE USERNAME = ?", username)){
+            if(rs.next()){
+                String realPassword = rs.getString(1);
+                if(password.equals(realPassword)) {
+                    if(!rs.next())
+                        throw new SQLException();
+                    ret = rs.getLong(2);
+                }
+            }
+            else throw new IllegalArgumentException();
+        }catch (SQLException e){
+            AppLog.getInstance().log("Find Password Failed.");
+            while(e != null){
+                AppLog.getInstance().log("message: " + e.getMessage());
+                e = e.getNextException();
+            }
+            throw new IllegalArgumentException();
+        }
+        oracle.closeConnection();
+        return ret;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.comp2411project.util;
 
+import com.example.comp2411project.AppLog;
 import com.example.comp2411project.func.Cache;
 import com.example.comp2411project.func.OracleDB;
 
@@ -9,30 +10,29 @@ import java.util.*;
 
 public class Order implements Table{
 
-    long id;
-    long deliverManID;
+    long orderId;
     long merchantID;
     long customerID;
     Set<Long> goodIDs;
     double price;
     int status;
+    Date createTime;
+    Date modifyTime;
     /*
     Status -1: Order rejected
     Status 0: Error;
     Status 1: Order sent
     Status 2: Order recieved
-    Status 3: Waiting for delivering
-    Status 4: Shipping
-    Status 5: Done
+    Status 3: Shipping
+    Status 4: Done
      */
 
     public Order(long id) {
-        this.id = id;
+        this.orderId = id;
     }
 
-    public Order(long deliverManID, long merchantID, long customerID, Set<Long> goodIDs, double price, int status) {
-        this.id = -1;
-        this.deliverManID = deliverManID;
+    public Order(long merchantID, long customerID, Set<Long> goodIDs, double price, int status) {
+        this.orderId = -1;
         this.merchantID = merchantID;
         this.customerID = customerID;
         this.goodIDs = goodIDs;
@@ -48,20 +48,12 @@ public class Order implements Table{
         this.status = status;
     }
 
-    public long getId() {
-        return id;
+    public long getOrderId() {
+        return orderId;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getDeliverManID() {
-        return deliverManID;
-    }
-
-    public void setDeliverManID(long deliverManID) {
-        this.deliverManID = deliverManID;
+    public void setOrderId(long orderId) {
+        this.orderId = orderId;
     }
 
     public long getMerchantID() {
@@ -100,15 +92,15 @@ public class Order implements Table{
     public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        boolean hasValue = oracleDB.existValue("ORDER", "ID", id);
+        boolean hasValue = oracleDB.existValue("ORDERS", "ORDERID", orderId);
         if(hasValue){
-            oracleDB.update("UPDATE ORDER "+
-                    "SET DELIVERMANID = ?, MERCHANTID = ?, CUSTOMERID = ?, PRICE = ?, STATUS = ? " +
-                    "WHERE ID = ?", deliverManID, merchantID, customerID, price, status, id);
+            oracleDB.update("UPDATE ORDERS "+
+                    "SET MERCHANTID = ?, CUSTOMERID = ?, PRICE = ?, STATUS = ? " +
+                    "WHERE ORDERID = ?", merchantID, customerID, price, status, orderId);
         }else{
-            id = oracleDB.insert("INSERT INTO ORDER(DELIVERMANID, MERCHANTID, CUSTOMERID, PRICE, STATUS) VALUES(?, ?, ?, ?, ?)", deliverManID, merchantID, customerID, price, status);
+            orderId = oracleDB.insert("INSERT INTO ORDERS(MERCHANTID, CUSTOMERID, PRICE, STATUS) VALUES(?, ?, ?, ?, ?)", merchantID, customerID, price, status);
             for(long goodID : goodIDs){
-                oracleDB.insert("INSERT INTO ORDER2GOODS(ORDERID, GOODID) VALUES(?, ?)", id, goodID);
+                oracleDB.insert("INSERT INTO ORDERS2GOODS(ORDERID, GOODSID) VALUES(?, ?)", orderId, goodID);
             }
         }
         oracleDB.closeConnection();
@@ -120,26 +112,31 @@ public class Order implements Table{
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         try{
-            ResultSet rs = oracleDB.query("SELECT DELIVERMANID, MERCHANTID, CUSTOMERID, PRICE, STATUS FROM ORDER WHERE ID = ?", id);
+            ResultSet rs = oracleDB.query("SELECT MERCHANTID, CUSTOMERID, PRICE, STATUS FROM ORDERS WHERE ORDERID = ?", orderId);
             if(rs.next()){
-                deliverManID = rs.getLong(1);
-                merchantID = rs.getLong(2);
-                customerID = rs.getLong(3);
-                price = rs.getDouble(4);
-                status = rs.getInt(5);
+                merchantID = rs.getLong(1);
+                customerID = rs.getLong(2);
+                price = rs.getDouble(3);
+                status = rs.getInt(4);
             }
             if(goodIDs == null){
                 goodIDs = new TreeSet<>();
-                rs = oracleDB.query("SELECT GOODID FROM ORDER2GOODS WHERE ORDERID = ?", id);
+                rs = oracleDB.query("SELECT GOODSID FROM ORDERS2GOODS WHERE ORDERID = ?", orderId);
                 while (rs.next()){
                     long goodID = rs.getLong(1);
                     goodIDs.add(goodID);
                 }
             }
+            rs = oracleDB.query("SELECT CREATE_TIME, MODIFY_TIME FROM ORDERS " +
+                    "WHERE ORDERID = ?", orderId);
+            if(rs.next()){
+                createTime = rs.getTimestamp(1);
+                modifyTime = rs.getTimestamp(2);
+            }
         }catch (SQLException e){
-            System.out.println("Pull Error: ");
+            AppLog.getInstance().log("Pull Error: ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }

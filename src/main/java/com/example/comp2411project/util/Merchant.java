@@ -1,32 +1,32 @@
 package com.example.comp2411project.util;
 
+import com.example.comp2411project.AppLog;
 import com.example.comp2411project.func.Cache;
 import com.example.comp2411project.func.OracleDB;
-import javafx.util.Pair;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
 public class Merchant implements Table {
-    long id;
+    long merchantId;
     String username;
     String password;
     String phoneNO;
     String address;
-    double positionX;
-    double positionY;
+    int positionX;
+    int positionY;
 
     public Merchant(long id){
-        this.id=id;
+        this.merchantId =id;
     }
 
-    public long getId() {
-        return id;
+    public long getMerchantId() {
+        return merchantId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setMerchantId(long merchantId) {
+        this.merchantId = merchantId;
     }
 
     public String getUsername() {
@@ -61,19 +61,19 @@ public class Merchant implements Table {
         this.address = address;
     }
 
-    public double getPositionX() {
+    public int getPositionX() {
         return positionX;
     }
 
-    public void setPositionX(double positionX) {
+    public void setPositionX(int positionX) {
         this.positionX = positionX;
     }
 
-    public double getPositionY() {
+    public int getPositionY() {
         return positionY;
     }
 
-    public void setPositionY(double positionY) {
+    public void setPositionY(int positionY) {
         this.positionY = positionY;
     }
 
@@ -81,14 +81,14 @@ public class Merchant implements Table {
     public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        boolean hasValue = oracleDB.existValue("MERCHANT", "ID", id);
+        boolean hasValue = oracleDB.existValue("MERCHANT", "ID", merchantId);
         if(hasValue){
             oracleDB.update("UPDATE MERCHANT "+
-                    "SET USERNAME = ?, PASSWORD = ?, MERCHANT = ?, ADDRESS = ? "+
-                    "WHERE ID = ?", username, password, phoneNO, address, id);
+                    "SET USERNAME = ?, PASSWORD = ?, MERCHANT = ?, ADDRESS = ?, PX = ?, PY = ? "+
+                    "WHERE ID = ?", username, password, phoneNO, address, positionX, positionY, merchantId);
 
         }else{
-            id = oracleDB.insert("INSERT INTO MERCHANT(USERNAME, PASSWORD, PHONENO, ADDRESS) VALUES(?, ?, ?, ?)",username, password, phoneNO, address);
+            merchantId = oracleDB.insert("INSERT INTO MERCHANT(USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY) VALUES(?, ?, ?, ?, ?, ?)",username, password, phoneNO, address, positionX, positionY);
         }
         oracleDB.closeConnection();
         return this;
@@ -98,17 +98,19 @@ public class Merchant implements Table {
     public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS FROM MERCHANT WHERE ID = ?", id)){
+        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY FROM MERCHANT WHERE ID = ?", merchantId)){
             if(rs.next()){
                 username = rs.getString(1);
                 password = rs.getString(2);
                 phoneNO = rs.getString(3);
                 address = rs.getString(4);
+                positionX = rs.getInt(5);
+                positionY = rs.getInt(6);
             }
         }catch (SQLException e){
-            System.out.println("Query Error: ");
+            AppLog.getInstance().log("Query Error: ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -121,23 +123,22 @@ public class Merchant implements Table {
         OracleDB oracleDB = OracleDB.getInstance();
         Cache cache = Cache.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT ID FROM ORDER WHERE MERCHANTID = ?", id)){
+        try(ResultSet rs = oracleDB.query("SELECT ID FROM ORDERS WHERE MERCHANTID = ?", merchantId)){
             while(rs.next()){
                 long oid = rs.getLong(1);
                 Order order;
                 if(cache.getOrderHashMap().containsKey(oid)) {
-                    order = cache.getOrderHashMap().get(oid);
+                    order = (Order) cache.getOrderHashMap().get(oid).pullUpdate();
                 }else{
-                    order = new Order(oid);
+                    order = (Order) new Order(oid).pullUpdate();
                     cache.getOrderHashMap().put(oid, order);
                 }
-                order.pullUpdate();
                 ret.put(oid, order);
             }
         }catch (SQLException e){
-            System.out.println("Search the order list failed. ");
+            AppLog.getInstance().log("Search the order list failed. ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -145,7 +146,103 @@ public class Merchant implements Table {
         return ret;
     }
 
-    public Deliverman getNearestDeliverman() {
-        return null;
+    public HashMap<Long, Goods> getGoodList(){
+        HashMap<Long, Goods> ret = new HashMap<>();
+        OracleDB oracleDB = OracleDB.getInstance();
+        Cache cache = Cache.getInstance();
+        oracleDB.getConnection();
+        try(ResultSet rs = oracleDB.query("SELECT GOODSID FROM GOODS WHERE MERCHANTID = ?", merchantId)){
+            while(rs.next()){
+                long oid = rs.getLong(1);
+                Goods goods;
+                if(cache.getOrderHashMap().containsKey(oid)) {
+                    goods = (Goods) cache.getGoodsHashMap().get(oid).pullUpdate();
+                }else{
+                    goods = (Goods) new Goods(oid).pullUpdate();
+                    cache.getGoodsHashMap().put(oid, goods);
+                }
+                ret.put(oid, goods);
+            }
+        }catch (SQLException e){
+            AppLog.getInstance().log("Search the goods list failed. ");
+            while(e != null){
+                AppLog.getInstance().log("message: " + e.getMessage());
+                e = e.getNextException();
+            }
+        }
+        oracleDB.closeConnection();
+        return ret;
+    }
+
+    public void recieveOrder(Order order){
+        OracleDB oracle = OracleDB.getInstance();
+        order.setStatus(order.getStatus() + 1);
+        order.pushInfo();
+    }
+
+
+    public Deliverman getNearestDeliverman() throws SQLException{
+        Cache cache = Cache.getInstance();
+        OracleDB oracle = OracleDB.getInstance();
+        Deliverman deliverman = null;
+        oracle.getConnection();
+        ResultSet rs = oracle.query("SELECT NEAREST_DELIVER_ID(?, ?) FROM DUAL", positionX, positionY);
+        if(rs.next()){
+            long idd = rs.getLong(1);
+            deliverman = cache.getDeliverman(idd);
+        }
+        oracle.closeConnection();
+        return deliverman;
+    }
+
+    public Order updateOrder(Order order) throws NoSuchFieldException{
+        order.setStatus(order.getStatus() + 1);
+        order.pushInfo();
+        Deliverman deliverman = null;
+        try{
+            deliverman = getNearestDeliverman();
+            if(deliverman == null)
+                throw new NoSuchFieldException();
+        }
+        catch (SQLException e){
+            AppLog.getInstance().log("SQL Statement Error");
+            while(e != null){
+                AppLog.getInstance().log("message: " + e.getMessage());
+                e = e.getNextException();
+            }
+            throw new NoSuchFieldException();
+        }
+        deliverman.setOrderNO(order.getOrderId());
+        deliverman.pushInfo();
+        return order;
+    }
+
+    public static long checkUsernameAndPassword(String username, String password) throws IllegalArgumentException{
+        OracleDB oracle = OracleDB.getInstance();
+        oracle.getConnection();
+        long ret = 0;
+        boolean hasValue = oracle.existValue("MERCHANT", "USERNAME", username);
+        if(!hasValue)
+            throw new IllegalArgumentException();
+        try(ResultSet rs = oracle.query("SELECT PASSWORD, CUSTOMERID FROM MERCHANT WHERE USERNAME = ?", username)){
+            if(rs.next()){
+                String realPassword = rs.getString(1);
+                if(password.equals(realPassword)) {
+                    if(!rs.next())
+                        throw new SQLException();
+                    ret = rs.getLong(2);
+                }
+            }
+            else throw new IllegalArgumentException();
+        }catch (SQLException e){
+            AppLog.getInstance().log("Find Password Failed.");
+            while(e != null){
+                AppLog.getInstance().log("message: " + e.getMessage());
+                e = e.getNextException();
+            }
+            throw new IllegalArgumentException();
+        }
+        oracle.closeConnection();
+        return ret;
     }
 }

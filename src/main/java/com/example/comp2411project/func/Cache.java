@@ -1,9 +1,6 @@
 package com.example.comp2411project.func;
 
-import com.example.comp2411project.util.Deliverman;
-import com.example.comp2411project.util.Goods;
-import com.example.comp2411project.util.Merchant;
-import com.example.comp2411project.util.Order;
+import com.example.comp2411project.util.*;
 
 import java.util.HashMap;
 
@@ -21,6 +18,27 @@ public class Cache {
     HashMap<Long, Merchant> merchantHashMap;
     HashMap<Long, Order> orderHashMap;
     HashMap<Long, Goods> goodsHashMap;
+    HashMap<Long, Deliverman> delivermanHashMap;
+    HashMap<Long, Customer> customerHashMap;
+
+    Table localTable;
+    int TableType;
+
+    public Table getLocalTable(){
+        return localTable;
+    }
+
+    public void setLocalTable(Table localTable) {
+        this.localTable = localTable;
+    }
+
+    public int getTableType() {
+        return TableType;
+    }
+
+    public void setTableType(int tableType) {
+        TableType = tableType;
+    }
 
     public HashMap<Long, Merchant> getMerchantHashMap() {
         return merchantHashMap;
@@ -57,4 +75,23 @@ public class Cache {
         merchantHashMap.put(id, merchant);
         return merchant;
     }
+
+    public Deliverman getDeliverman(long id){
+        if(delivermanHashMap.containsKey(id)){
+            return (Deliverman) delivermanHashMap.get(id).pullUpdate();
+        }
+        Deliverman deliverman = (Deliverman) new Deliverman(id).pullUpdate();
+        delivermanHashMap.put(id, deliverman);
+        return deliverman;
+    }
+
+    public Customer getCustomer(long id){
+        if(customerHashMap.containsKey(id)){
+            return (Customer) customerHashMap.get(id).pullUpdate();
+        }
+        Customer customer = (Customer) new Customer(id).pullUpdate();
+        customerHashMap.put(id, customer);
+        return customer;
+    }
+
 }

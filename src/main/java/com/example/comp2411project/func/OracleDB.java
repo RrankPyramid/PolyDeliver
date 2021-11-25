@@ -2,6 +2,7 @@ package com.example.comp2411project.func;
 
 import java.sql.*;
 
+import com.example.comp2411project.AppLog;
 import oracle.jdbc.driver.*;
 import oracle.sql.*;
 
@@ -32,18 +33,18 @@ public class OracleDB {
         }catch (ClassNotFoundException e){
 
         } catch (SQLException e){
-            System.out.println("Connection Error: ");
+            AppLog.getInstance().log("Connection Error: ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
         try{
             connection.setAutoCommit(true);
         }catch (SQLException e){
-            System.out.println("Set auto-commit error!" );
+            AppLog.getInstance().log("Set auto-commit error!" );
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -64,9 +65,9 @@ public class OracleDB {
             }
         }
         catch (SQLException e){
-            System.out.println("Close Database Failed. ");
+            AppLog.getInstance().log("Close Database Failed. ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -83,9 +84,9 @@ public class OracleDB {
             if(rs.next())
                 ret = true;
         }catch (SQLException e){
-            System.out.println("Query Database failed.");
+            AppLog.getInstance().log("Query Database failed.");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -97,7 +98,10 @@ public class OracleDB {
             ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             if(paramList != null) {
                 for (int i = 0; i < paramList.length; ++i) {
-                    ps.setObject(i + 1, paramList[i]);
+                    if(paramList[i] != null)
+                        ps.setObject(i + 1, paramList[i]);
+                    else
+                        ps.setObject(i + 1, Types.NULL);
                 }
             }
             ps.executeUpdate();
@@ -107,9 +111,9 @@ public class OracleDB {
                 ret = rs.getLong(1);
             }
         }catch (SQLException e){
-            System.out.println("Error in executing the sql code: " + sql);
+            AppLog.getInstance().log("Error in executing the sql code: " + sql);
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -121,14 +125,17 @@ public class OracleDB {
             ps = connection.prepareStatement(sql);
             if(paramList != null) {
                 for (int i = 0; i < paramList.length; ++i) {
-                    ps.setObject(i+1, paramList[i]);
+                    if(paramList[i] != null)
+                        ps.setObject(i+1, paramList[i]);
+                    else
+                        ps.setObject(i+1, Types.NULL);
                 }
             }
             ps.executeUpdate();
         }catch (SQLException e){
-            System.out.println("Error in executing the sql code: " + sql);
+            AppLog.getInstance().log("Error in executing the sql code: " + sql);
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }
@@ -144,9 +151,9 @@ public class OracleDB {
                 rs = ps.executeQuery();
             }
         }catch (SQLException e){
-            System.out.println("Error in executing the sql code: " + sql);
+            AppLog.getInstance().log("Error in executing the sql code: " + sql);
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }

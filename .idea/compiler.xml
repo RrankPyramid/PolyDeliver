@@ -9,7 +9,7 @@
         <module name="COMP2411-project" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="COMP2411-project" target="11" />
     </bytecodeTargetLevel>
   </component>

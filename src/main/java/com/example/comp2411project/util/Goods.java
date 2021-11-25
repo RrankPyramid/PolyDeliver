@@ -1,27 +1,28 @@
 package com.example.comp2411project.util;
 
+import com.example.comp2411project.AppLog;
 import com.example.comp2411project.func.OracleDB;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Goods implements Table {
-    long id;
+    long goodId;
     long merchantID;
     double price;
     String name;
     int counts;
 
     public Goods(long id) {
-        this.id = id;
+        this.goodId = id;
     }
 
-    public long getId() {
-        return id;
+    public long getGoodId() {
+        return goodId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setGoodId(long goodId) {
+        this.goodId = goodId;
     }
 
     public long getMerchantID() {
@@ -60,14 +61,14 @@ public class Goods implements Table {
     public Table pushInfo(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        boolean hasValue = oracleDB.existValue("GOODS", "ID", id);
+        boolean hasValue = oracleDB.existValue("GOODS", "GOODSID", goodId);
         if(hasValue){
             oracleDB.update("UPDATE GOODS "+
                     "SET MERCHANTID = ?, PRICE = ?, NAME = ?, COUNTS = ? "+
-                    "WHERE ID = ?", merchantID, price, name, counts, id);
+                    "WHERE GOODSID = ?", merchantID, price, name, counts, goodId);
 
         }else{
-            id = oracleDB.insert("INSERT INTO GOODS(MERCHANTID, PRICE, NAME, COUNTS) VALUES(?, ?, ?, ?)",merchantID, price, name, counts);
+            goodId = oracleDB.insert("INSERT INTO GOODS(MERCHANTID, PRICE, NAME, COUNTS) VALUES(?, ?, ?, ?)",merchantID, price, name, counts);
         }
         oracleDB.closeConnection();
         return this;
@@ -77,7 +78,7 @@ public class Goods implements Table {
     public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT MERCHANTID, PRICE, NAME, COUNTS FROM GOODS WHERE ID = ?", id)){
+        try(ResultSet rs = oracleDB.query("SELECT MERCHANTID, PRICE, NAME, COUNTS FROM GOODS WHERE GOODSID = ?", goodId)){
             if(rs.next()){
                 merchantID = rs.getInt(1);
                 price = rs.getDouble(2);
@@ -85,9 +86,9 @@ public class Goods implements Table {
                 counts = rs.getInt(4);
             }
         }catch (SQLException e){
-            System.out.println("pull Error: ");
+            AppLog.getInstance().log("pull Error: ");
             while(e != null){
-                System.out.println("message: " + e.getMessage());
+                AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
         }

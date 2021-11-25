@@ -4,26 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="806bb38e-2c26-429f-b459-761f26d2628d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/COMP2411-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc7__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_simple_1_7_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules-Administrator的MacBook Pro.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations-Administrator的MacBook Pro.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace-Administrator的MacBook Pro.xml" afterDir="false" />
+    <list default="true" id="806bb38e-2c26-429f-b459-761f26d2628d" name="Changes" comment="finish all insert method">
+      <change afterPath="$PROJECT_DIR$/fxml.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-plus-1.2.0-RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CoverController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/cover.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/PolyULogo_630x630.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/backbutton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/sql/oracle.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/COMP2411-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COMP2411-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_17_ea_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_ea_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_17_ea_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_ea_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_17_ea_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_ea_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_17_ea_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_ea_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/slf4j_simple_1_7_28.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP2411-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP2411-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ojdbc7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ojdbc7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ojdbc7.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/PolyUBazApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/PolyUBazApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" afterDir="false" />
@@ -31,9 +44,18 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/hello-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/Cache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/OracleDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/OracleDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Deliverman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Deliverman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Merchant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Table.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,22 +63,67 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\Admin\.m2\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../Oracle/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="C:\Users\Admin\Works\Oracle\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="21DfhJEj19tF1CJFfcmiMI8gSJU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Works\COMP2411-project\src\main\resources\com\example\comp2411project\controller" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="PolyUBazApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -86,8 +153,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637480700965</updated>
+      <workItem from="1637731337861" duration="16641000" />
+      <workItem from="1637810857297" duration="11507000" />
+      <workItem from="1637824845371" duration="6907000" />
     </task>
+    <task id="LOCAL-00001" summary="finish all insert method">
+      <created>1637509484092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637509484092</updated>
+    </task>
+    <task id="LOCAL-00002" summary="finish all insert method">
+      <created>1637509581800</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637509581800</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -99,5 +190,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="finish all insert method" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish all insert method" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
