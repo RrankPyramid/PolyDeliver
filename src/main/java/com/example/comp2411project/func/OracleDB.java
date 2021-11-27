@@ -92,7 +92,7 @@ public class OracleDB {
         }
         return ret;
     }
-    public long insert(String sql, Object... paramList){
+    public long insert(String sql, Object... paramList) throws SQLException{
         long ret = -1;
         try{
             ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -116,6 +116,7 @@ public class OracleDB {
                 AppLog.getInstance().log("message: " + e.getMessage());
                 e = e.getNextException();
             }
+            throw e;
         }
         return ret;
     }

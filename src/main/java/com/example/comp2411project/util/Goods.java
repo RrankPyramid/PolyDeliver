@@ -58,7 +58,7 @@ public class Goods implements Table {
     }
 
     @Override
-    public Table pushInfo(){
+    public Table pushInfo() throws SQLException{
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("GOODS", "GOODSID", goodId);

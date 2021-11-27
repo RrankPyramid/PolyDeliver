@@ -14,6 +14,13 @@
         <junit.version>5.7.1</junit.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>javafx-plus</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>com.oracle.ojdbc</groupId>
@@ -30,7 +37,11 @@
             <artifactId>javafx-fxml</artifactId>
             <version>17-ea+11</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.gitee.Biubiuyuyu</groupId>
+            <artifactId>javafx-plus</artifactId>
+            <version>1.2.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -44,9 +55,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.palexdev</groupId>
-            <artifactId>materialfx</artifactId>
-            <version>11.12.0</version>
+            <groupId>com.gitee.Biubiuyuyu</groupId>
+            <artifactId>javafx-plus</artifactId>
+            <version>1.2.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>8.0.10</version>
         </dependency>
     </dependencies>
 
@@ -57,8 +73,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -84,7 +100,9 @@
                 <includes>
                     <include>**/*.properties</include>
                     <include>**/*.fxml</include>
-                    <include>**/fxml/*.fxml</include>
+                    <include>**/*.css</include>
+                    <include>**/*.png</include>
+                    <include>**/*.jpg</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>

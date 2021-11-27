@@ -9,40 +9,37 @@ import com.example.comp2411project.func.Cache;
 import com.example.comp2411project.util.Customer;
 import com.example.comp2411project.util.Deliverman;
 import com.example.comp2411project.util.Merchant;
-import io.github.palexdev.materialfx.controls.MFXButton;
-import io.github.palexdev.materialfx.controls.MFXPasswordField;
-import io.github.palexdev.materialfx.controls.MFXTextField;
+import com.example.comp2411project.util.Table;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
 @FXController(
-        path = "controller/login.fxml"
+        path = "fxml/login.fxml"
 )
 @FXWindow(
         title = "login",
-        mainStage = true
+        icon = "image/money.png"
 )
 public class LoginController extends FXBaseController {
     @FXML
-            private MFXTextField usernameField;
+            private JFXTextField usernameField;
 
     @FXML
-            private MFXPasswordField passwordField;
+            private JFXPasswordField passwordField;
 
     @FXML
-            private MFXButton loginButton;
+            private JFXButton loginButton;
 
     @FXML
-            private MFXButton registerButton;
+            private JFXButton registerButton;
 
     @FXML
-            private MFXButton backButton;
+            private JFXButton backButton;
 
     String username;
 
@@ -53,15 +50,6 @@ public class LoginController extends FXBaseController {
 
     public LoginController(){}
 
-    @FXML
-    public void registerClick(){
-        this.redirectToRegister();
-    }
-
-    @FXRedirect(
-            close = false
-    )
-    public String redirectToRegister() { return "RegisterController"; }
 
     @FXRedirect
     public String redirectToCustomer() { return "CustomerController"; }
@@ -72,56 +60,60 @@ public class LoginController extends FXBaseController {
     @FXRedirect
     public String redirectToDeliverman() { return "DelivermanController"; }
 
+    @FXRedirect
+    public String redirectToCoverPage() { return "CoverController"; }
+
+    @FXRedirect(
+            close = false
+    )
+    public String redirectToRegister(){
+        return "RegisterController";
+    }
 
     public void initialize(){
-        username = usernameField.getText();
-        password = passwordField.getText();
     }
 
     @FXML
-    private void loginOnAction(ActionEvent actionEvent) throws IllegalArgumentException{
+    private void loginOnAction(ActionEvent actionEvent){
         username = usernameField.getText();
         password = passwordField.getText();
-
-        if(username.isEmpty() || password.isEmpty()){
-            throw new IllegalArgumentException();
-        }
-
-        Cache cache = Cache.getInstance();
-        if(cache.getTableType() == 0){ //Customer
-            try{
+        try {
+            if (username.isEmpty() || password.isEmpty()) {
+                throw new IllegalArgumentException();
+            }
+            Cache cache = Cache.getInstance();
+            if (cache.getTableType() == Table.CUSTOMER) { //Customer
                 long id = Customer.checkUsernameAndPassword(username, password);
-                if(id == 0)
+                if (id == 0)
                     throw new IllegalArgumentException();
                 cache.setLocalTable(cache.getCustomer(id));
                 this.redirectToCustomer();
-            }catch (IllegalArgumentException e){
-                label.setText("Username or Password incorrect. Please try again. ");
-                label.setTextFill(Color.color(255, 0, 0));
-            }
-        }else if(cache.getTableType() == 1)  { //Deliverman
-            try{
+            } else if (cache.getTableType() == Table.DELIVERMAN) { //Deliverman
                 long id = Deliverman.checkUsernameAndPassword(username, password);
-                if(id == 0)
+                if (id == 0)
                     throw new IllegalArgumentException();
                 cache.setLocalTable(cache.getDeliverman(id));
                 this.redirectToDeliverman();
-            }catch (IllegalArgumentException e) {
-                label.setText("Username or Password incorrect. Please try again. ");
-                label.setTextFill(Color.color(255, 0, 0));
-            }
-        }else if(cache.getTableType() == 2) { //Merchant
-            try{
+            } else if (cache.getTableType() == Table.MERCHANT) { //Merchant
                 long id = Merchant.checkUsernameAndPassword(username, password);
-                if(id == 0)
+                if (id == 0)
                     throw new IllegalArgumentException();
                 cache.setLocalTable(cache.getMerchant(id));
                 this.redirectToMerchant();
-            }catch (IllegalArgumentException e){
-                label.setText("Username or Password incorrect. Please try again. ");
-                label.setTextFill(Color.color(255, 0, 0));
             }
+        }catch (IllegalArgumentException e){
+            label.setText("Username or Password incorrect. Please try again. ");
+            label.setTextFill(Color.color(1, 0, 0));
         }
     }
 
+    @FXML
+    private void afterBackClick(){
+        this.redirectToCoverPage();
+    }
+
+    @FXML
+    private void afterRegisterClick(){
+        this.redirectToRegister();
+    }
 }

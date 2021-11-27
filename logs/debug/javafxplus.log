@@ -1,0 +1,223 @@
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:39)] - starting JavaFX-Plus Application
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:41)] - 
+               _                  ________   __             _____  _
+              | |                |  ____\ \ / /            |  __ \| |
+              | | __ ___   ____ _| |__   \ V /    _____    | |__) | |_   _ ___
+          _   | |/ _` \ \ / / _` |  __|   > <     _____    |  ___/| | | | / __|
+         | |__| | (_| |\ V / (_| | |     / . \             | |    | | |_| \__ \
+          \____/ \__,_| \_/ \__,_|_|    /_/ \_\            |_|    |_|\__,_|___/
+
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:51)] - starting to scanning and registering controllers
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:61)] - scanning directory: com.example.comp2411project.controller
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:40:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: CoverController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of CoverController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: LoginController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of LoginController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: RegisterController
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:40:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of RegisterController
+[DEBUG] 2021-11-27 00:40:11  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:39)] - starting JavaFX-Plus Application
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:41)] - 
+               _                  ________   __             _____  _
+              | |                |  ____\ \ / /            |  __ \| |
+              | | __ ___   ____ _| |__   \ V /    _____    | |__) | |_   _ ___
+          _   | |/ _` \ \ / / _` |  __|   > <     _____    |  ___/| | | | / __|
+         | |__| | (_| |\ V / (_| | |     / . \             | |    | | |_| \__ \
+          \____/ \__,_| \_/ \__,_|_|    /_/ \_\            |_|    |_|\__,_|___/
+
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:51)] - starting to scanning and registering controllers
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:61)] - scanning directory: com.example.comp2411project.controller
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: CoverController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of CoverController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: LoginController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of LoginController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: RegisterController
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:41:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of RegisterController
+[DEBUG] 2021-11-27 00:41:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 00:41:08  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:39)] - starting JavaFX-Plus Application
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:41)] - 
+               _                  ________   __             _____  _
+              | |                |  ____\ \ / /            |  __ \| |
+              | | __ ___   ____ _| |__   \ V /    _____    | |__) | |_   _ ___
+          _   | |/ _` \ \ / / _` |  __|   > <     _____    |  ___/| | | | / __|
+         | |__| | (_| |\ V / (_| | |     / . \             | |    | | |_| \__ \
+          \____/ \__,_| \_/ \__,_|_|    /_/ \_\            |_|    |_|\__,_|___/
+
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:51)] - starting to scanning and registering controllers
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:61)] - scanning directory: com.example.comp2411project.controller
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: CoverController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of CoverController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: LoginController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of LoginController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: RegisterController
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:43:07  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of RegisterController
+[DEBUG] 2021-11-27 00:43:09  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 00:43:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:39)] - starting JavaFX-Plus Application
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:41)] - 
+               _                  ________   __             _____  _
+              | |                |  ____\ \ / /            |  __ \| |
+              | | __ ___   ____ _| |__   \ V /    _____    | |__) | |_   _ ___
+          _   | |/ _` \ \ / / _` |  __|   > <     _____    |  ___/| | | | / __|
+         | |__| | (_| |\ V / (_| | |     / . \             | |    | | |_| \__ \
+          \____/ \__,_| \_/ \__,_|_|    /_/ \_\            |_|    |_|\__,_|___/
+
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:51)] - starting to scanning and registering controllers
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:61)] - scanning directory: com.example.comp2411project.controller
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: CoverController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of CoverController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: LoginController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of LoginController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: RegisterController
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:47:10  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of RegisterController
+[DEBUG] 2021-11-27 00:47:11  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 00:47:12  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:14  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:14  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:15  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:16  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:17  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:20  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:21  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:21  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:22  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 00:47:23  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:39)] - starting JavaFX-Plus Application
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:41)] - 
+               _                  ________   __             _____  _
+              | |                |  ____\ \ / /            |  __ \| |
+              | | __ ___   ____ _| |__   \ V /    _____    | |__) | |_   _ ___
+          _   | |/ _` \ \ / / _` |  __|   > <     _____    |  ___/| | | | / __|
+         | |__| | (_| |\ V / (_| | |     / . \             | |    | | |_| \__ \
+          \____/ \__,_| \_/ \__,_|_|    /_/ \_\            |_|    |_|\__,_|___/
+
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:51)] - starting to scanning and registering controllers
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:61)] - scanning directory: com.example.comp2411project.controller
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:52:18  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: CoverController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of CoverController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: LoginController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of LoginController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: RegisterController
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 00:52:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of RegisterController
+[DEBUG] 2021-11-27 00:52:20  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 00:52:21  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:39)] - starting JavaFX-Plus Application
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:41)] - 
+               _                  ________   __             _____  _
+              | |                |  ____\ \ / /            |  __ \| |
+              | | __ ___   ____ _| |__   \ V /    _____    | |__) | |_   _ ___
+          _   | |/ _` \ \ / / _` |  __|   > <     _____    |  ___/| | | | / __|
+         | |__| | (_| |\ V / (_| | |     / . \             | |    | | |_| \__ \
+          \____/ \__,_| \_/ \__,_|_|    /_/ \_\            |_|    |_|\__,_|___/
+
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:51)] - starting to scanning and registering controllers
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:61)] - scanning directory: com.example.comp2411project.controller
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.CoverController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: CoverController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of CoverController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.LoginController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: LoginController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of LoginController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.start(FXPlusApplication.java:67)] - loading class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.config.FXPlusApplication.loadFXPlusClass(FXPlusApplication.java:86)] - loading stage of class: com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:103)] - loading the FXML file of com.example.comp2411project.controller.RegisterController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.createWindow(FXControllerFactory.java:171)] - creating window.....
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.function.FXWindowParser.parse(FXWindowParser.java:28)] - parsing @FXWindow of class: RegisterController
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.setWindowTitle(FXBaseController.java:228)] - setting title of window
+[INFO] 2021-11-27 01:08:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.entity.FXBaseController.initLifeCycle(FXBaseController.java:121)] - init the life cycle of RegisterController
+[DEBUG] 2021-11-27 01:08:45  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 01:08:48  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 01:08:50  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to CoverController
+[DEBUG] 2021-11-27 01:08:51  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 01:08:52  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 01:08:53  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 01:08:54  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to CoverController
+[DEBUG] 2021-11-27 01:08:55  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to LoginController
+[DEBUG] 2021-11-27 01:08:56  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to RegisterController
+[DEBUG] 2021-11-27 01:08:58  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.stage.StageManager.redirectWithParams(StageManager.java:111)] - redirecting to CoverController

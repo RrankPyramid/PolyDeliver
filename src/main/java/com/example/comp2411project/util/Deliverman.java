@@ -6,6 +6,7 @@ import com.example.comp2411project.func.OracleDB;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 
 public class Deliverman implements Table {
     long delivermanId;
@@ -29,8 +30,18 @@ public class Deliverman implements Table {
         orderNO = null;
     }
 
+    public Deliverman(String username, String password, String phoneNO) {
+        this.username = username;
+        this.password = password;
+        this.phoneNO = phoneNO;
+        this.orderNO = null;
+        Random random = new Random(System.currentTimeMillis());
+        this.px = random.nextInt(100);
+        this.py = random.nextInt(100);
+    }
+
     @Override
-    public Table pushInfo(){
+    public Table pushInfo() throws SQLException{
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("DELIVERMAN", "ID", delivermanId);
@@ -125,5 +136,53 @@ public class Deliverman implements Table {
         }
         oracle.closeConnection();
         return ret;
+    }
+
+    public long getDelivermanId() {
+        return delivermanId;
+    }
+
+    public void setDelivermanId(long delivermanId) {
+        this.delivermanId = delivermanId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPhoneNO() {
+        return phoneNO;
+    }
+
+    public void setPhoneNO(String phoneNO) {
+        this.phoneNO = phoneNO;
+    }
+
+    public int getPx() {
+        return px;
+    }
+
+    public void setPx(int px) {
+        this.px = px;
+    }
+
+    public int getPy() {
+        return py;
+    }
+
+    public void setPy(int py) {
+        this.py = py;
     }
 }

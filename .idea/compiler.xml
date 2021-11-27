@@ -9,8 +9,13 @@
         <module name="COMP2411-project" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="COMP2411-project" target="11" />
+    <bytecodeTargetLevel target="8">
+      <module name="COMP2411-project" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="COMP2411-project" options="" />
+    </option>
   </component>
 </project>

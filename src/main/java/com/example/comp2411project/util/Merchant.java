@@ -7,13 +7,13 @@ import com.example.comp2411project.func.OracleDB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Merchant implements Table {
     long merchantId;
     String username;
     String password;
     String phoneNO;
-    String address;
     int positionX;
     int positionY;
 
@@ -23,6 +23,15 @@ public class Merchant implements Table {
 
     public long getMerchantId() {
         return merchantId;
+    }
+
+    public Merchant(String username, String password, String phoneNO) {
+        this.username = username;
+        this.password = password;
+        this.phoneNO = phoneNO;
+        Random random = new Random(System.currentTimeMillis());
+        this.positionX = random.nextInt(100);
+        this.positionY = random.nextInt(100);
     }
 
     public void setMerchantId(long merchantId) {
@@ -53,14 +62,6 @@ public class Merchant implements Table {
         this.phoneNO = phoneNO;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public int getPositionX() {
         return positionX;
     }
@@ -78,17 +79,17 @@ public class Merchant implements Table {
     }
 
     @Override
-    public Table pushInfo(){
+    public Table pushInfo() throws SQLException{
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("MERCHANT", "ID", merchantId);
         if(hasValue){
             oracleDB.update("UPDATE MERCHANT "+
-                    "SET USERNAME = ?, PASSWORD = ?, MERCHANT = ?, ADDRESS = ?, PX = ?, PY = ? "+
-                    "WHERE ID = ?", username, password, phoneNO, address, positionX, positionY, merchantId);
+                    "SET USERNAME = ?, PASSWORD = ?, MERCHANT = ?, PX = ?, PY = ? "+
+                    "WHERE ID = ?", username, password, phoneNO, positionX, positionY, merchantId);
 
         }else{
-            merchantId = oracleDB.insert("INSERT INTO MERCHANT(USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY) VALUES(?, ?, ?, ?, ?, ?)",username, password, phoneNO, address, positionX, positionY);
+            merchantId = oracleDB.insert("INSERT INTO MERCHANT(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)",username, password, phoneNO, positionX, positionY);
         }
         oracleDB.closeConnection();
         return this;
@@ -98,14 +99,13 @@ public class Merchant implements Table {
     public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY FROM MERCHANT WHERE ID = ?", merchantId)){
+        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, PX, PY FROM MERCHANT WHERE ID = ?", merchantId)){
             if(rs.next()){
                 username = rs.getString(1);
                 password = rs.getString(2);
                 phoneNO = rs.getString(3);
-                address = rs.getString(4);
-                positionX = rs.getInt(5);
-                positionY = rs.getInt(6);
+                positionX = rs.getInt(4);
+                positionY = rs.getInt(5);
             }
         }catch (SQLException e){
             AppLog.getInstance().log("Query Error: ");
@@ -174,7 +174,7 @@ public class Merchant implements Table {
         return ret;
     }
 
-    public void recieveOrder(Order order){
+    public void recieveOrder(Order order) throws SQLException{
         OracleDB oracle = OracleDB.getInstance();
         order.setStatus(order.getStatus() + 1);
         order.pushInfo();
@@ -195,7 +195,7 @@ public class Merchant implements Table {
         return deliverman;
     }
 
-    public Order updateOrder(Order order) throws NoSuchFieldException{
+    public Order updateOrder(Order order) throws NoSuchFieldException, SQLException{
         order.setStatus(order.getStatus() + 1);
         order.pushInfo();
         Deliverman deliverman = null;

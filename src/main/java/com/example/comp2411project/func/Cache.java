@@ -22,6 +22,13 @@ public class Cache {
     HashMap<Long, Customer> customerHashMap;
 
     Table localTable;
+
+
+    /**
+     * 0 : Customer
+     * 1 : Deliver Man
+     * 2 : Merchant
+     */
     int TableType;
 
     public Table getLocalTable(){
@@ -92,6 +99,21 @@ public class Cache {
         Customer customer = (Customer) new Customer(id).pullUpdate();
         customerHashMap.put(id, customer);
         return customer;
+    }
+
+    public void addToCache(Customer customer){
+        long id = customer.getCustomerId();
+        customerHashMap.put(id, customer);
+    }
+
+    public void addToCache(Deliverman deliverman){
+        long id = deliverman.getDelivermanId();
+        delivermanHashMap.put(id, deliverman);
+    }
+
+    public void addToCache(Merchant merchant){
+        long id = merchant.getMerchantId();
+        merchantHashMap.put(id, merchant);
     }
 
 }

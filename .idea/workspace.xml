@@ -4,39 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="806bb38e-2c26-429f-b459-761f26d2628d" name="Changes" comment="finish all insert method">
-      <change afterPath="$PROJECT_DIR$/fxml.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-plus-1.2.0-RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CoverController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/cover.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/PolyULogo_630x630.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/backbutton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sql/oracle.sql" afterDir="false" />
+    <list default="true" id="806bb38e-2c26-429f-b459-761f26d2628d" name="Changes" comment="finish basic GUI">
+      <change afterPath="$PROJECT_DIR$/logs/debug/javafxplus.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error/javafxplus.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/customer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/loan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/motorbike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/seller.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/cover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/cover.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer_register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer_register.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/PolyULogo_630x630.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/backbutton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/choices.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/customer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/loan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/market-store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/motorbike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/order.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/seller.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/COMP2411-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COMP2411-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/slf4j_simple_1_7_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc7__2_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ojdbc7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-plus-1.2.0-RELEASE.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Login.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/PolyUBazApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/PolyUBazApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/comp2411project.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CoverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CoverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" afterDir="false" />
@@ -44,19 +56,24 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/cover.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/oracle.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/oracle.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/AppLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/AppLog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/Cache.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/OracleDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/OracleDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/hello-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Deliverman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Deliverman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Goods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Merchant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +85,9 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Controller" />
+        <option value="FXML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -86,10 +106,13 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="C:\Users\Admin\.m2\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../Oracle/apache-maven-3.8.4" />
+        <option name="mavenHome" value="C:\Users\Admin\Works\Oracle\apache-maven-3.8.4" />
         <option name="userSettingsFile" value="C:\Users\Admin\Works\Oracle\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="corretto-1.8" />
   </component>
   <component name="ProjectId" id="21DfhJEj19tF1CJFfcmiMI8gSJU" />
   <component name="ProjectLevelVcsManager">
@@ -109,24 +132,45 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/fxml" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Works\COMP2411-project\src\main\resources\fxml" />
+      <recent name="C:\Users\Admin\Works\COMP2411-project\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Works\COMP2411-project\src\main\resources\com\example\comp2411project\controller" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.comp2411project.Main" />
+      <module name="COMP2411-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.comp2411project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PolyUBazApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
       <option name="MAIN_CLASS_NAME" value="com.example.comp2411project.PolyUBazApplication" />
       <module name="COMP2411-project" />
       <extension name="coverage">
@@ -139,8 +183,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PolyUBazApplication" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.PolyUBazApplication" />
       </list>
     </recent_temporary>
@@ -155,7 +215,13 @@
       <updated>1637480700965</updated>
       <workItem from="1637731337861" duration="16641000" />
       <workItem from="1637810857297" duration="11507000" />
-      <workItem from="1637824845371" duration="6907000" />
+      <workItem from="1637824845371" duration="21687000" />
+      <workItem from="1637910624594" duration="241000" />
+      <workItem from="1637910879731" duration="191000" />
+      <workItem from="1637911375016" duration="1621000" />
+      <workItem from="1637913212672" duration="24766000" />
+      <workItem from="1637939872086" duration="10180000" />
+      <workItem from="1637975161848" duration="2603000" />
     </task>
     <task id="LOCAL-00001" summary="finish all insert method">
       <created>1637509484092</created>
@@ -171,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637509581800</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finish basic GUI">
+      <created>1637848232725</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637848232725</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +268,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="finish all insert method" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish all insert method" />
+    <MESSAGE value="finish basic GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish basic GUI" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,44 @@
+.root {
+    -fx-font-size: 16px;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+
+.order-node{
+    -fx-font-size:14;
+    -fx-background-image: url('../image/order.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 50px;
+    -fx-text-fill: #000000;
+    -jfx-toggle-color: #f6b712;
+    -jfx-toggle-line-color: #06b8ee;
+}
+
+.list-node{
+    -fx-font-size:14;
+    -fx-background-image: url('../image/choices.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 50px;
+    -fx-text-fill: #000000;
+    -jfx-toggle-color: #f6b712;
+    -jfx-toggle-line-color: #06b8ee;
+}
+
+.info-node{
+    -fx-font-size:14;
+    -fx-background-image: url('../image/user.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 50px;
+    -fx-text-fill: #000000;
+    -jfx-toggle-color: #f6b712;
+    -jfx-toggle-line-color: #06b8ee;
+}

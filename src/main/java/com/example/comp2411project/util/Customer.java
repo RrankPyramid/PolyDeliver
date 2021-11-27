@@ -6,6 +6,7 @@ import com.example.comp2411project.func.OracleDB;
 
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Set;
 
 public class Customer implements Table {
@@ -13,7 +14,6 @@ public class Customer implements Table {
     String username;
     String password;
     String phoneNO;
-    String address;
     int px;
     int py;
 
@@ -21,62 +21,32 @@ public class Customer implements Table {
         customerId = id;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public long getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(long customerId) {
-        this.customerId = customerId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
+    public Customer(String username, String password, String phoneNO) {
         this.username = username;
-    }
-
-    public String getPhoneNO() {
-        return phoneNO;
-    }
-
-    public void setPhoneNO(String phoneNO) {
+        this.password = password;
         this.phoneNO = phoneNO;
+        Random random = new Random(System.currentTimeMillis());
+        px = random.nextInt(100);
+        py = random.nextInt(100);
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     Order makeOrder(Goods[] goods, Merchant merchant){
         return null;
     }
 
     @Override
-    public Table pushInfo(){
+    public Table pushInfo() throws SQLException{
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
         boolean hasValue = oracleDB.existValue("CUSTOMER", "ID", customerId);
         if(hasValue){
             oracleDB.update("UPDATE CUSTOMER "+
-                    "SET USERNAME = ?, PASSWORD = ?, PHONENO = ?, ADDRESS = ?, PX = ?, PY = ? "+
-                    "WHERE ID = ?", username, password, phoneNO, address, px, py, customerId);
+                    "SET USERNAME = ?, PASSWORD = ?, PHONENO = ?, PX = ?, PY = ? "+
+                    "WHERE ID = ?", username, password, phoneNO, px, py, customerId);
 
         }else{
-            customerId = oracleDB.insert("INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY, id) VALUES(?, ?, ?, ?)",username, password, phoneNO, px, py, address);
+            customerId = oracleDB.insert("INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)",username, password, phoneNO, px, py);
         }
         oracleDB.closeConnection();
         return this;
@@ -88,14 +58,13 @@ public class Customer implements Table {
     public Table pullUpdate(){
         OracleDB oracleDB = OracleDB.getInstance();
         oracleDB.getConnection();
-        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, ADDRESS, PX, PY FROM CUSTOMER WHERE ID = ?", customerId)){
+        try(ResultSet rs = oracleDB.query("SELECT USERNAME, PASSWORD, PHONENO, PX, PY FROM CUSTOMER WHERE ID = ?", customerId)){
             if(rs.next()){
                 username = rs.getString(1);
                 password = rs.getString(2);
                 phoneNO = rs.getString(3);
-                address = rs.getString(4);
-                px = rs.getInt(5);
-                py = rs.getInt(6);
+                px = rs.getInt(4);
+                py = rs.getInt(5);
             }
         }catch (SQLException e){
             AppLog.getInstance().log("Query Error: ");
@@ -137,7 +106,7 @@ public class Customer implements Table {
         return ret;
     }
 
-    public Order makeOrder(long merchantID, Set<Long> goodIDs){
+    public Order makeOrder(long merchantID, Set<Long> goodIDs) throws SQLException{
         Cache cache = Cache.getInstance();
         Merchant merchant = cache.getMerchant(merchantID);
         double price = goodIDs.stream().mapToDouble(k -> cache.getGoods(k).getPrice()).sum();
@@ -145,7 +114,7 @@ public class Customer implements Table {
         return order;
     }
 
-    public void confirmRecieve(Order order){
+    public void confirmRecieve(Order order) throws SQLException{
         order.setStatus(order.getStatus() + 1);
         order.pushInfo();
     }
@@ -177,5 +146,37 @@ public class Customer implements Table {
         }
         oracle.closeConnection();
         return ret;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPhoneNO() {
+        return phoneNO;
+    }
+
+    public void setPhoneNO(String phoneNO) {
+        this.phoneNO = phoneNO;
     }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="root" stylesheets="@customer.css" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp2411project.controller.CustomerController">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1200.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXToggleNode fx:id="makeOrderNode" layoutX="196.0" layoutY="66.0" styleClass="order-node" stylesheets="@customer.css" />
+                  <Label layoutX="165.0" layoutY="130.0" text="Place Order">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleNode fx:id="orderListNode" layoutX="562.0" layoutY="66.0" styleClass="list-node" stylesheets="@customer.css" />
+                  <Label layoutX="533.0" layoutY="130.0" text="View Order">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleNode fx:id="myInfoNode" layoutX="932.0" layoutY="66.0" styleClass="info-node" stylesheets="@customer.css" />
+                  <Label layoutX="908.0" layoutY="130.0" text="My Profile">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</fx:root>

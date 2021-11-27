@@ -1,5 +1,7 @@
 package com.example.comp2411project;
 
+import cn.edu.scau.biubiusuisui.annotation.FXScan;
+import cn.edu.scau.biubiusuisui.config.FXPlusApplication;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,33 +12,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+@FXScan(
+         base = {"com.example.comp2411project.controller"}
+)
 public class PolyUBazApplication extends Application {
-    private Stage primaryStage;
-    private VBox rootLayout;
+
+    public PolyUBazApplication() {}
 
     @Override
     public void start(Stage stage) throws IOException {
-        this.primaryStage = stage;
-        this.primaryStage.setTitle("PolyUBaz");
-        initRootLayout();
-    }
-
-    public void initRootLayout(){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(PolyUBazApplication.class.getResource("login.fxml"));
-            rootLayout = fxmlLoader.load();
-            Scene scene = new Scene(rootLayout, 320, 240);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-
-
-    public static void main(String[] args) {
-        launch();
+        FXPlusApplication.start(PolyUBazApplication.class);
     }
 }
