@@ -116,4 +116,8 @@ public class Cache {
         merchantHashMap.put(id, merchant);
     }
 
+    public void addToCache(Goods goods){
+        long id = goods.getGoodId();
+        goodsHashMap.put(id, goods);
+    }
 }

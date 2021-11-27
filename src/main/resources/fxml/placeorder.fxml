@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.Pane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp2411project.controller.PlaceOrderController">
+   <children>
+      <JFXComboBox fx:id="comboBox" layoutX="203.0" layoutY="40.0" prefHeight="23.0" prefWidth="199.0" />
+      <JFXListView fx:id="stringListView" layoutX="19.0" layoutY="91.0" prefHeight="243.0" prefWidth="567.0" />
+      <JFXButton fx:id="confirmButton" layoutX="438.0" layoutY="346.0" onAction="#afterConfirmButtonClick" styleClass="shiny-orange" text="Confirm">
+         <stylesheets>
+            <URL value="@customer.css" />
+            <URL value="@login.css" />
+         </stylesheets></JFXButton>
+      <JFXButton fx:id="resetButton" layoutX="104.0" layoutY="354.0" onAction="#afterResetButtonClick" styleClass="green" stylesheets="@login.css" text="Reset" />
+   </children>
+</fx:root>

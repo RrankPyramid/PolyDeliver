@@ -5,75 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806bb38e-2c26-429f-b459-761f26d2628d" name="Changes" comment="finish basic GUI">
-      <change afterPath="$PROJECT_DIR$/logs/debug/javafxplus.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/error/javafxplus.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/customer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/loan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/motorbike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/image/seller.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/cover.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/cover.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer_register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer_register.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/PolyULogo_630x630.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/backbutton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/choices.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/customer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/loan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/market-store.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/money.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/motorbike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/order.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/seller.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/COMP2411-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COMP2411-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc7__2_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error/javafxplus.log.2021-11-26" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/InfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/ViewListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/placeorder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javafx-plus-1.2.0-RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/PolyUBazApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/PolyUBazApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/comp2411project.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CoverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CoverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug/javafxplus.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug/javafxplus.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error/javafxplus.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error/javafxplus.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/controller/PlaceOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/Cache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/func/OracleDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Deliverman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Deliverman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/comp2411project/util/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/cover.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/comp2411project/controller/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/oracle.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/oracle.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/AppLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/AppLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/PolyUBazController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/Cache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/OracleDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/func/OracleDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Deliverman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Deliverman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Goods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Merchant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/comp2411project/util/Table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,9 +36,10 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="Kotlin Class" />
         <option value="Controller" />
         <option value="FXML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -138,6 +90,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -222,6 +175,9 @@
       <workItem from="1637913212672" duration="24766000" />
       <workItem from="1637939872086" duration="10180000" />
       <workItem from="1637975161848" duration="2603000" />
+      <workItem from="1637982308687" duration="18953000" />
+      <workItem from="1638008933446" duration="1257000" />
+      <workItem from="1638019562156" duration="3018000" />
     </task>
     <task id="LOCAL-00001" summary="finish all insert method">
       <created>1637509484092</created>
@@ -244,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637848232725</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish basic GUI">
+      <created>1637982603330</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637982603330</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

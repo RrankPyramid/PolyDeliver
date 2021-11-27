@@ -47,8 +47,8 @@
                   <Font size="19.0" />
                </font></Text>
                 <Label fx:id="label" layoutX="193.0" layoutY="269.0" text=" " textFill="RED" />
-                <JFXPasswordField fx:id="passwordField" layoutX="221.0" layoutY="219.0" prefHeight="32.0" prefWidth="228.0" styleClass="jfx-password-field" stylesheets="@login.css" />
                 <JFXTextField fx:id="usernameField" layoutX="221.0" layoutY="159.0" prefHeight="32.0" prefWidth="228.0" styleClass="jfx-text-field" stylesheets="@login.css" />
+                <JFXPasswordField fx:id="passwordField" layoutX="221.0" layoutY="219.0" prefHeight="32.0" prefWidth="228.0" styleClass="jfx-password-field" stylesheets="@login.css" />
                 <JFXButton fx:id="registerButton" layoutX="147.0" layoutY="291.0" onAction="#afterRegisterClick" styleClass="fx-button-2" stylesheets="@login.css" text="register" />
                 <JFXButton fx:id="loginButton" layoutX="356.0" layoutY="288.0" onAction="#loginOnAction" styleClass="shiny-orange" stylesheets="@login.css" text="login" />
                 <JFXButton fx:id="backButton" layoutX="449.0" layoutY="39.0" onAction="#afterBackClick" styleClass="back-button" stylesheets="@login.css" text=" " />

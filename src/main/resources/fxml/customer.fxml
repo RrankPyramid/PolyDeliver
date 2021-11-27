@@ -12,7 +12,7 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="root" stylesheets="@customer.css" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp2411project.controller.CustomerController">
    <children>
-      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1200.0">
+      <BorderPane fx:id="borderPane" layoutX="-1.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1200.0">
          <top>
             <MenuBar BorderPane.alignment="CENTER">
               <menus>

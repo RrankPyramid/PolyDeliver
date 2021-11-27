@@ -6,6 +6,7 @@ import com.example.comp2411project.func.OracleDB;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -241,6 +242,21 @@ public class Merchant implements Table {
                 e = e.getNextException();
             }
             throw new IllegalArgumentException();
+        }
+        oracle.closeConnection();
+        return ret;
+    }
+
+    public static ArrayList<Merchant> getMerchantList() throws SQLException{
+        OracleDB oracle = OracleDB.getInstance();
+        Cache cache = Cache.getInstance();
+        ArrayList<Merchant> ret = new ArrayList<>();
+        oracle.getConnection();
+        ResultSet rs = oracle.query("SELECT MERCHANTID FROM MERCHANT", (Object[]) null);
+        while(rs.next()){
+            long id = rs.getLong(1);
+            Merchant merchant = cache.getMerchant(id);
+            ret.add(merchant);
         }
         oracle.closeConnection();
         return ret;

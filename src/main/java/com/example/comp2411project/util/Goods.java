@@ -8,10 +8,24 @@ import java.sql.SQLException;
 
 public class Goods implements Table {
     long goodId;
-    long merchantID;
+    Long merchantID;
     double price;
     String name;
     int counts;
+
+    public Goods(Long merchantID, double price, String name, int counts) {
+        this.merchantID = merchantID;
+        this.price = price;
+        this.name = name;
+        this.counts = counts;
+    }
+
+    public Goods(double price, String name, int counts) {
+        this.merchantID = null;
+        this.price = price;
+        this.name = name;
+        this.counts = counts;
+    }
 
     public Goods(long id) {
         this.goodId = id;
@@ -80,7 +94,7 @@ public class Goods implements Table {
         oracleDB.getConnection();
         try(ResultSet rs = oracleDB.query("SELECT MERCHANTID, PRICE, NAME, COUNTS FROM GOODS WHERE GOODSID = ?", goodId)){
             if(rs.next()){
-                merchantID = rs.getInt(1);
+                merchantID = rs.getLong(1);
                 price = rs.getDouble(2);
                 name = rs.getString(3);
                 counts = rs.getInt(4);
@@ -94,6 +108,11 @@ public class Goods implements Table {
         }
         oracleDB.closeConnection();
         return this;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s   x%d. \n", getName(), getCounts());
     }
 
 }
