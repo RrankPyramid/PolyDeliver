@@ -3,15 +3,7 @@
 COMP2411-project
 
 
-## Team
-
-LIU Qianli  20080796D
-
-Yang Rongtao  20075563D
-
-LU Junhao 20066913D
-
-WANG Zihan 20074893D
-
-CHEN Kui 20074628D
+## Requirement
+JAVAFX-PLUS
+Details are described in pom.xml
 
