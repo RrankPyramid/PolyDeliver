@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="1141.0" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp2411project.controller.DeliverController">
+   <children>
+      <Label layoutX="71.0" layoutY="104.0" text="Waiting for the order...">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="refresh_button" buttonType="RAISED" layoutX="463.0" layoutY="104.0" onAction="#afterRefreshButtonClick" prefHeight="48.0" prefWidth="127.0" ripplerFill="#ab2727" styleClass="shiny-orange" stylesheets="@login.css" text="Refresh" />
+      <JFXButton fx:id="confirm_button" layoutX="152.0" layoutY="412.0" onAction="#afterConfirmButtonClick" styleClass="shiny-orange" stylesheets="@login.css" text="Confirm RECIEVED" />
+      <Label fx:id="px_text" layoutX="180.0" layoutY="309.0" text="label">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="order_id_text" layoutX="182.0" layoutY="225.0" text="label">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>

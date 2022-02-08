@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="com.example.comp2411project.controller.CoverController">
+   <children>
+      <Button fx:id="deliverManButton" layoutX="238.0" layoutY="162.0" mnemonicParsing="false" onAction="#afterDeliverButtonClick" styleClass="deliver-button" stylesheets="@cover.css" />
+      <Button fx:id="customerButton" layoutX="46.0" layoutY="162.0" mnemonicParsing="false" onAction="#afterCustomerButtonClick" prefHeight="101.0" prefWidth="101.0" styleClass="customer-button" stylesheets="@cover.css" />
+      <Button fx:id="merchantButton" layoutX="425.0" layoutY="162.0" mnemonicParsing="false" onAction="#afterMerchantButtonClick" styleClass="merchant-button" stylesheets="@cover.css" />
+      <Text layoutX="60.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="238.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deliverman" wrappingWidth="124.99999701976776">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="439.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Merchant">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="186.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Who Are You ?">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+   </children>
+</fx:root>

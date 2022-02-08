@@ -1,0 +1,152 @@
+.root {
+    -fx-font-size: 16px;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+
+/*Raised button example */
+-fx-button-1 {
+    -fx-padding:0.5em 0.5em;
+    -fx-font-size:14;
+    -fx-background-color:rgb(77, 102, 204);
+    -fx-pref-width:100;
+    -fx-text-fill:#FFFFFF;
+    -fx-spacing:0.25em;
+}
+
+/*register button example */
+.fx-button-2 {
+    -fx-padding:0.5em 0.5em;
+    -fx-font-size:14;
+    -fx-background-color: rgba(240, 243, 243, 0);
+    -fx-pref-width:100;
+    -fx-text-fill: #000000;
+    -fx-spacing:0.25em;
+}
+
+.back-button {
+    -fx-font-size:14;
+    -fx-background-image: url('../image/backbutton.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 50px;
+    -fx-text-fill: #000000;
+}
+
+.shiny-orange {
+    -fx-background-color:
+            linear-gradient(#ffd65b, #e68400),
+            linear-gradient(#ffef84, #f2ba44),
+            linear-gradient(#ffea6a, #efaa22),
+            linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+            linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -jfx-button-type:RAISED;
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+}
+
+.jfx-text-field{
+    -fx-text-limit: 40;
+    -fx-line-color: rgb(204, 255, 255);
+    -jfx-disable-animation: true;
+}
+
+.jfx-password-field{
+    -fx-text-limit: 40;
+    -fx-line-color: rgb(204, 255, 255);
+    -jfx-disable-animation: true;
+}
+
+.green {
+    -fx-background-color:
+            linear-gradient(#f0ff35, #a9ff00),
+            radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #395306;
+}
+
+
+
+   /* CSS */
+.button-17 {
+   align-items: center;
+   appearance: none;
+   background-color: #fff;
+   border-radius: 24px;
+   border-style: none;
+   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+   box-sizing: border-box;
+   color: #3c4043;
+   cursor: pointer;
+   display: inline-flex;
+   fill: currentcolor;
+   font-family: "Google Sans",Roboto,Arial,sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   height: 48px;
+   justify-content: center;
+   letter-spacing: .25px;
+   line-height: normal;
+   max-width: 100%;
+   overflow: visible;
+   padding: 2px 24px;
+   position: relative;
+   text-align: center;
+   text-transform: none;
+   transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   width: auto;
+   will-change: transform,opacity;
+   z-index: 0;
+}
+
+.button-17:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+}
+
+.button-17:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+
+   /* CSS */
+.button-74 {
+   background-color: #fbeee0;
+   border: 2px solid #422800;
+   border-radius: 30px;
+   box-shadow: #422800 4px 4px 0 0;
+   color: #422800;
+   cursor: pointer;
+   display: inline-block;
+   font-weight: 600;
+   font-size: 18px;
+   padding: 0 18px;
+   line-height: 50px;
+   text-align: center;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+}
+
+.button-74:hover {
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}

@@ -1,0 +1,187 @@
+[ERROR] 2021-11-28 01:24:28  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 01:37:03  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 01:40:51  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 02:03:06  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 02:50:44  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/
+
+[ERROR] 2021-11-28 03:44:56  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 03:44:56  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid conversion requested
+[ERROR] 2021-11-28 04:27:39  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 04:27:39  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid conversion requested
+[ERROR] 2021-11-28 04:32:15  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 04:32:15  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid conversion requested
+[ERROR] 2021-11-28 04:35:03  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 04:35:03  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid conversion requested
+[ERROR] 2021-11-28 04:54:07  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 04:54:07  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid argument(s) in call
+[ERROR] 2021-11-28 04:58:02  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO CUSTOMER(USERNAME, PASSWORD, PHONENO, PX, PY) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 04:58:02  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: internal error
+[ERROR] 2021-11-28 05:41:20  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - No Username! 
+[ERROR] 2021-11-28 05:44:46  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - No Username! 
+[ERROR] 2021-11-28 05:48:26  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - No Username! 
+[ERROR] 2021-11-28 06:05:23  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO DELIVERMAN(USERNAME, PASSWORD, PHONENO, ORDERNO, PX, PY) VALUES(?, ?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 06:05:23  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-04043: object DELIVERMAN does not exist
+
+[ERROR] 2021-11-28 06:19:32  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO DELIVERMAN(USERNAME, PASSWORD, PHONENO, ORDERNO, PX, PY) VALUES(?, ?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 06:19:32  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02291: integrity constraint (20075563D.SYS_C00326329) violated - parent key not found
+
+[ERROR] 2021-11-28 06:25:25  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO DELIVERMAN(USERNAME, PASSWORD, PHONENO, ORDERNO, PX, PY) VALUES(?, ?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 06:25:25  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02291: integrity constraint (20075563D.SYS_C00326329) violated - parent key not found
+
+[ERROR] 2021-11-28 06:27:40  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO DELIVERMAN(USERNAME, PASSWORD, PHONENO, ORDERNO, PX, PY) VALUES(?, ?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 06:27:40  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02291: integrity constraint (20075563D.SYS_C00326329) violated - parent key not found
+
+[ERROR] 2021-11-28 06:34:20  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/placeorder.fxml
+
+[ERROR] 2021-11-28 06:34:20  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml:16
+
+[ERROR] 2021-11-28 06:44:35  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - No Username! 
+[ERROR] 2021-11-28 06:44:47  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - No Username! 
+[ERROR] 2021-11-28 06:45:36  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - obj is null!
+[ERROR] 2021-11-28 08:49:22  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/
+
+[ERROR] 2021-11-28 08:49:24  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/
+
+[ERROR] 2021-11-28 09:33:54  [main] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT GOODSID FROM GOODS WHERE MERCHANTID = 2;
+[ERROR] 2021-11-28 09:33:54  [main] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00933: SQL command not properly ended
+
+[ERROR] 2021-11-28 10:26:02  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO GOODS(MERCHANTID, PRICE, NAME, COUNTS) VALUES(?, ?, ?, ?)
+[ERROR] 2021-11-28 10:26:02  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-01400: cannot insert NULL into ("20075563D"."GOODS"."MERCHANTID")
+
+[ERROR] 2021-11-28 10:35:18  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - obj is null!
+[ERROR] 2021-11-28 10:35:53  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - obj is null!
+[ERROR] 2021-11-28 10:36:10  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - obj is null!
+[ERROR] 2021-11-28 11:38:13  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Liukm
+[ERROR] 2021-11-28 11:40:05  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - ??????
+[ERROR] 2021-11-28 11:42:13  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO ORDERS(MERCHANTID, CUSTOMERID, PRICE, STATUS) VALUES(?, ?, ?, ?, ?)
+[ERROR] 2021-11-28 11:42:13  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: internal error
+[ERROR] 2021-11-28 11:48:32  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: INSERT INTO ORDERS2GOODS(ORDERID, GOODSID) VALUES(?, ?)
+[ERROR] 2021-11-28 11:48:32  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-04043: object ORDERS2GOODS does not exist
+
+[ERROR] 2021-11-28 12:10:24  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/
+
+[ERROR] 2021-11-28 16:00:48  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:02:45  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:06:43  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:08:26  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:08:26  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:09:22  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:09:22  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:12:45  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:12:45  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:17:28  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/
+
+[ERROR] 2021-11-28 16:17:28  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:17:48  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:19:04  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:19:04  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:22:03  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:22:03  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:22:53  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:22:53  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:24:54  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.AViewListController with modifiers ""
+[ERROR] 2021-11-28 16:24:54  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:33:54  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXBuilder.getBean(FXBuilder.java:24)] - Class cn.edu.scau.biubiusuisui.factory.FXBuilder can not access a member of class com.example.comp2411project.controller.ViewListController with modifiers ""
+[ERROR] 2021-11-28 16:33:54  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml:16
+
+[ERROR] 2021-11-28 16:35:08  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - Error resolving onAction='#afterConfirmButtonClick', either the event handler is not in the Namespace or there is an error in the script.
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/viewlist.fxml:19
+
+[ERROR] 2021-11-28 16:35:08  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml:16
+
+[ERROR] 2021-11-28 16:36:04  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - Error resolving onAction='#afterConfirmButtonClick', either the event handler is not in the Namespace or there is an error in the script.
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/viewlist.fxml:19
+
+[ERROR] 2021-11-28 16:36:04  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml:16
+
+[ERROR] 2021-11-28 16:49:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/viewlist.fxml
+
+[ERROR] 2021-11-28 16:49:19  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/customer.fxml
+
+[ERROR] 2021-11-28 16:58:36  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT ORDERID FROM ORDER WHERE CUSTOMERID = ?
+[ERROR] 2021-11-28 16:58:36  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00903: invalid table name
+
+[ERROR] 2021-11-28 16:58:44  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT ORDERID FROM ORDER WHERE CUSTOMERID = ?
+[ERROR] 2021-11-28 16:58:44  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00903: invalid table name
+
+[ERROR] 2021-11-28 17:00:20  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT ORDERID FROM ORDER WHERE CUSTOMERID = ?
+[ERROR] 2021-11-28 17:00:20  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00903: invalid table name
+
+[ERROR] 2021-11-28 17:01:14  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT ORDERID FROM ORDER WHERE CUSTOMERID = ?
+[ERROR] 2021-11-28 17:01:14  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00903: invalid table name
+
+[ERROR] 2021-11-28 17:06:09  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Connection Error: 
+[ERROR] 2021-11-28 17:06:09  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+[ERROR] 2021-11-28 17:07:08  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT PASSWORD, CUSTOMERID FROM DELIVERMAN WHERE USERNAME = ?
+[ERROR] 2021-11-28 17:07:08  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00904: "CUSTOMERID": invalid identifier
+
+[ERROR] 2021-11-28 17:07:18  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT PASSWORD, CUSTOMERID FROM DELIVERMAN WHERE USERNAME = ?
+[ERROR] 2021-11-28 17:07:18  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00904: "CUSTOMERID": invalid identifier
+
+[ERROR] 2021-11-28 20:16:26  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/
+
+[ERROR] 2021-11-28 20:16:26  [JavaFX Application Thread] [cn.edu.scau.biubiusuisui.factory.FXControllerFactory.getFxBaseController0(FXControllerFactory.java:139)] - 
+/J:/COMP2411/COMP2411-project-gui/COMP2411-project-gui/target/classes/fxml/merchant.fxml
+
+[ERROR] 2021-11-28 20:24:47  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT PASSWORD, CUSTOMERID FROM DELIVERMAN WHERE USERNAME = ?
+[ERROR] 2021-11-28 20:24:47  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid column index
+[ERROR] 2021-11-28 20:24:50  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT PASSWORD, CUSTOMERID FROM DELIVERMAN WHERE USERNAME = ?
+[ERROR] 2021-11-28 20:24:50  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid column index
+[ERROR] 2021-11-28 20:36:57  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT PASSWORD, DELIVERMANID FROM DELIVERMAN WHERE USERNAME = ?
+[ERROR] 2021-11-28 20:36:57  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: Invalid column index
+[ERROR] 2021-11-28 20:38:55  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - No Username! 
+[ERROR] 2021-11-28 21:02:40  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Error in executing the sql code: SELECT PASSWORD, CUSTOMERID FROM MERCHANT WHERE USERNAME = ?
+[ERROR] 2021-11-28 21:02:40  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-00904: "CUSTOMERID": invalid identifier
+
+[ERROR] 2021-11-28 21:14:23  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Connection Error: 
+[ERROR] 2021-11-28 21:14:23  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+[ERROR] 2021-11-28 21:17:44  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Connection Error: 
+[ERROR] 2021-11-28 21:17:44  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+[ERROR] 2021-11-28 21:18:00  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Connection Error: 
+[ERROR] 2021-11-28 21:18:00  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+[ERROR] 2021-11-28 21:19:21  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - Connection Error: 
+[ERROR] 2021-11-28 21:19:21  [JavaFX Application Thread] [com.example.comp2411project.AppLog.error(AppLog.java:21)] - message: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
