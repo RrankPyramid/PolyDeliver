@@ -1,6 +1,6 @@
-# COMP2411-project
+# PolyDeliver
 
-COMP2411-project
+PolyDeliver is a software of ordering meal on the basis of Oracle Database
 
 
 ## Requirement
